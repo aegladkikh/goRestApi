@@ -72,7 +72,7 @@ func RequireAuthentication(next http.Handler) http.Handler {
 }
 
 // NewRouter returns an HTTP handler that implements the routes for the API
-func NewRouter() http.Handler {
+func TestRouter() http.Handler {
 	r := chi.NewRouter()
 
 	// r.Use(RequireAuthentication)

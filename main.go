@@ -1,7 +1,7 @@
 package main
 
 import (
-	v1 "main/api/v1"
+	v1 "goRestApi/api/v1"
 	"net/http"
 
 	"github.com/go-chi/chi"
@@ -17,7 +17,7 @@ func main() {
 		w.Write([]byte("root."))
 	})
 
-	r.Mount("/api/v1/", v1.NewRouter())
+	r.Mount("/api/v1/", v1.TestRouter())
 
 	http.ListenAndServe(":80", r)
 }
